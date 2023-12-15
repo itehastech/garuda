@@ -56,6 +56,16 @@
         updateBannerVisibility();
       }
 
+      function MuteAudio() {
+        // Call the C# function using Unity API
+        unityInstance.SendMessage('GameManager', 'OnMuteButtonClicked');
+      }
+
+      function UnmuteAudio() {
+        // Call the C# function using Unity API
+        unityInstance.SendMessage('GameManager', 'OnUnmuteButtonClicked');
+      }
+
       var buildUrl = "Build";
       var loaderUrl = buildUrl + "/Gadura.loader.js";
       var config = {
