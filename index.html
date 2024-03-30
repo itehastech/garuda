@@ -57,21 +57,23 @@
       }
 
       function MuteAudio() {
-        // Call the C# function using Unity API
         unityInstance.SendMessage('GameManager', 'OnMuteButtonClicked');
       }
 
       function UnmuteAudio() {
-        // Call the C# function using Unity API
         unityInstance.SendMessage('GameManager', 'OnUnmuteButtonClicked');
       }
 
+      function OnRestartButtonClicked() {
+        console.log("RESTART BUTTON PRESSED");
+      }
+
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/Gadura.loader.js";
+      var loaderUrl = buildUrl + "/Garuda.loader.js";
       var config = {
-        dataUrl: buildUrl + "/Gadura.data",
-        frameworkUrl: buildUrl + "/Gadura.framework.js",
-        codeUrl: buildUrl + "/Gadura.wasm",
+        dataUrl: buildUrl + "/Garuda.data",
+        frameworkUrl: buildUrl + "/Garuda.framework.js",
+        codeUrl: buildUrl + "/Garuda.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "Itehas",
         productName: "Jatayu",
