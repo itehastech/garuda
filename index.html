@@ -66,6 +66,11 @@
 
       function OnRestartButtonClicked() {
         console.log("RESTART BUTTON PRESSED");
+        RestartGame();
+      }
+
+      function RestartGame() {
+        unityInstance.SendMessage('GameManager', 'Play');
       }
 
       var buildUrl = "Build";
